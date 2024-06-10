@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('portada.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: 1;
+}
+
+.counter-container {
+    text-align: center;
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2, #80deea, #4dd0e1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;  
+    position: relative;  
+}
+
+.counter {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 20px;
+}
+
+.button-increase {
+    background-color: #062ed3;  
+    color: white;
+}
+
+.button-decrease {
+    background-color: #dc3545;  
+    color: white;
+}
+
+.button-reset {
+    background-color: #000000;  
+    color: white;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
