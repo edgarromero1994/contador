@@ -1,38 +1,35 @@
-const botonAumentar = document.getElementById("aumentar");
-const mostrarContador = document.getElementById("contador");
-const botonDisminuir = document.getElementById("disminuir");
-const botonreestablecer = document.getElementById("reestablecer");
+document.getElementById("aumentar").addEventListener("click", aumentar);
+document.getElementById("disminuir").addEventListener("click", disminuir);
+document.getElementById("reestablecer").addEventListener("click", reestablecer);
 
-botonAumentar.addEventListener("click", aumentar);
-botonDisminuir.addEventListener("click", disminuir);
-botonreestablecer.addEventListener("click", reestabler);
+const mostrarContador = document.getElementById("contador");
 
 let valorContador = 0;
 
 function cambiarColor () {
-    if (valorContador  > 0) {
+    if (valorContador > 0){
         contador.style.color = "green";
     } else if (valorContador < 0) {
-        contador.style.color = "red";
+        contador.style.color = "red"
     } else {
-        contador.style.color = "black";
+        contador.style.color = "black"
     }
 }
 
 function aumentar () {
     valorContador++;
-    mostrarContador.textContent = valorContador;
-    cambiarColor();
+    mostrarContador.textContent= valorContador
+    cambiarColor()
 }
 
 function disminuir () {
     valorContador--;
-    mostrarContador.textContent = valorContador;
-    cambiarColor();
+    mostrarContador.textContent = valorContador
+    cambiarColor()
 }
 
-function reestabler () {
+function reestablecer () {
     valorContador = 0;
-    mostrarContador.textContent = valorContador;
-    cambiarColor();
+    mostrarContador.textContent = valorContador
+    cambiarColor()
 }

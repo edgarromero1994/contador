@@ -32,10 +32,15 @@ body::before {
 }
 
 .counter {
-    font-size: 50px;
+   margin: 0 auto;
     margin-bottom: 20px;
-    color: #000000;
+    background-color: #f3efed;
+    width: 100px;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 2.5rem;
 }
+
 
 .buttons {
     display: flex;
